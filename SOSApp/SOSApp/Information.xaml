@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SOSApp.Information">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Fill" VerticalOptions="Start" Padding="10,10,10,10" >
+            <Grid Padding="10,30,10,0">
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <ImageButton Grid.Row="0" Grid.Column="0" Source="info" Clicked="OnInfoClicked"/> 
+                    <Label Grid.Row="0" Grid.Column="0" Text="Flood Info" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="1">
+                    <ImageButton Grid.Row="0" Grid.Column="1" Source="todolist" Clicked="OnToDoListClicked"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="To Do List" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="2">
+                    <ImageButton Grid.Row="0" Grid.Column="2" Source="house" HorizontalOptions="Center" Clicked="OnEvacuationClicked"/>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Evacuation" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </Grid>
+
+            <Label
+           Text="Category 1(C1) Urgency Status : (Total More Than Or Equal to 5 / Elderly More Than 2 / Adult More Than 4 / Children More Than 3)"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           />
+            <Label
+           Text="Category 2(C2) Urgency Status : (Total Less Than Or Equal to 4 / Elderly Less Than or Equal to 2 / Adult Less Than 3 / Children Less Than Or Equal to 3)"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           />
+            <Label
+           Text="Category 3 Urgency Status : (Total Less Than Or Equal to 2 / Elderly Less Than or Equal to 1 / Adult Less Than 2 / Children Less Than Or Equal to 1)"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SOSApp.HelpRecord">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Fill" >
+            <!--<Label x:Name="displayRecord"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           />-->
+                <ListView x:Name="displayRecord">
+                    <ListView.Header>
+                        <Grid>
+                            <Label Grid.Column="1" Text="Eld" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="2" Text="Adt" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Grid.Column="3" Text="Cdrn" HorizontalOptions="Center" FontAttributes="Bold" />
+                            <Label Grid.Column="4" Text="Vtm" HorizontalOptions="Center" FontAttributes="Bold" />
+                            <Label Grid.Column="5" Text="Long" HorizontalOptions="Center" FontAttributes="Bold" />
+                            <Label Grid.Column="6" Text="Lat" HorizontalOptions="Center" FontAttributes="Bold" />
+                            <Label Grid.Column="7" Text="Alt" HorizontalOptions="Center" FontAttributes="Bold" />
+                            <Label Grid.Column="8" Text="Stat" HorizontalOptions="Center" FontAttributes="Bold" />
+                        </Grid>
+                    </ListView.Header>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Label Grid.Column="1" Text="{Binding Elderly}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="2" Text="{Binding Adult}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="3" Text="{Binding Children}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="4" Text="{Binding Total}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="5" Text="{Binding Latitude}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="6" Text="{Binding Longtitude}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="7" Text="{Binding Altitude}" HorizontalOptions="Center" />
+                                    <Label Grid.Column="8" Text="{Binding Status}" HorizontalOptions="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

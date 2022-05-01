@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SOSApp.AboutApp">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Fill" VerticalOptions="Start" >
+            <Grid>
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <ImageButton Grid.Row="0" Grid.Column="0" Source="app"/>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Flood Application Info" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </Grid>
+
+            <Label
+           Text="Main Function: Provide necessary help from the application during the flood to the victims. &#x0a;&#x0a;Main Objective : &#x0a;&#x0a;To enable user to check user's or other's location.&#x0a;&#x0a;Able to input number of victims with 3 categories.&#x0a;&#x0a;Provide external help info for victim.&#x0a;&#x0a;&#x0a;Developer : Yeong Haoliang (SW0106072) &#x0a;&#x0a; Version : 8.3.0.1"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

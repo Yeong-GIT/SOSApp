@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="SOSApp.PressForHelp">
+    <ContentPage.Content>
+       <ScrollView>
+        <StackLayout Padding="30" Spacing="10">
+            <StackLayout>
+                <Button Padding="30" Text="Check My Location" Clicked="Button_Clicked" BackgroundColor="Teal" TextColor="White"/>
+            </StackLayout>
+
+            <FlexLayout Direction="Row"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly" >
+                <Label  x:Name="resultLocation"  />
+            </FlexLayout>
+            <FlexLayout Direction="Row"  AlignItems="Center" JustifyContent="SpaceEvenly">
+                <ImageButton Source="Location.png"
+                         WidthRequest="50"
+                         HeightRequest="50"
+                         IsVisible="true"
+                         HorizontalOptions="End"
+                         />
+                <Entry x:Name="inputLat" Placeholder="Lat" Keyboard="Numeric" WidthRequest="70"/>
+                <Entry x:Name="inputLong" Placeholder="Long" Keyboard="Numeric" WidthRequest="70"/>
+                <Entry x:Name="inputAlt" Placeholder="Alt" Keyboard="Numeric" WidthRequest="70"/>
+            </FlexLayout>
+
+            <StackLayout Padding="20" Spacing="30">
+                <FlexLayout Direction="Row"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly" >
+                    <ImageButton Source="Elderly.png"
+                         WidthRequest="50"
+                         HeightRequest="50"
+                         IsVisible="true"
+                         HorizontalOptions="End"
+                         />
+                    <Entry x:Name="inputElderly" Placeholder="Number of Elderly" Keyboard="Numeric" WidthRequest="200"/>
+                </FlexLayout>
+
+                <FlexLayout Direction="Row"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly" >
+                    <ImageButton Source="Adult.png"
+                         WidthRequest="50"
+                         HeightRequest="50"
+                         IsVisible="true"
+                         HorizontalOptions="End"
+                         />
+                    <Entry x:Name="inputAdult" Placeholder="Number of Adult" Keyboard="Numeric" WidthRequest="200"/>
+                </FlexLayout>
+
+                <FlexLayout Direction="Row"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly" >
+                    <ImageButton Source="Children.png"
+                         WidthRequest="50"
+                         HeightRequest="50"
+                         IsVisible="true"
+                         HorizontalOptions="End"
+                         />
+                    <Entry x:Name="inputChildren" Placeholder="Number of Children" Keyboard="Numeric" WidthRequest="200"/>
+                </FlexLayout>
+            </StackLayout>
+
+            
+
+
+            <StackLayout Padding="10" Spacing="30">
+            <FlexLayout Direction="Row"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly">
+                    <Button HeightRequest="70" WidthRequest="120" x:Name="calculateButton" Text="Total" VerticalOptions="CenterAndExpand" BackgroundColor="Teal" TextColor="White" Clicked="OnCalculateTotal" />
+                    <Button HeightRequest="70" WidthRequest="120" x:Name="saveButton" Text="Save" VerticalOptions="CenterAndExpand" BackgroundColor="SlateGray" TextColor="White" Clicked="OnSaveRecord"/>
+                </FlexLayout>
+            </StackLayout>
+
+
+
+
+                <StackLayout HorizontalOptions="Center">
+                    <FlexLayout Direction="Row" AlignItems="Center"
+                JustifyContent="SpaceEvenly">
+                        <Label  FontSize="Large" Text="Total Flood Victims : " HorizontalTextAlignment="Center"/>
+                        <Label  FontSize="Large" x:Name="outputResult" Text="0" HorizontalTextAlignment="Center" />
+                    </FlexLayout>
+                    <Label FontSize="Large" x:Name="outputVictimStatus" Text="NA" HorizontalTextAlignment="Center" />
+
+                </StackLayout>
+
+                <StackLayout BindingContext="{x:Static sys:DateTime.Now}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="{Binding StringFormat='{0}'}"/>
+                </StackLayout>
+
+
+
+
+
+
+
+
+            </StackLayout>
+       </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
